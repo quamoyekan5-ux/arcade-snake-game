@@ -55,7 +55,7 @@ To run the project locally on your machine:
 
 Clone the repository:
 
-git clone https://github.com/your-username/arcade-snake-game.git
+git clone https://github.com/quamoyekan5-ux/arcade-snake-game
 
 
 Navigate into the project directory:

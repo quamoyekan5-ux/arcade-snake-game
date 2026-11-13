@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101827">
+    <meta name="description" content="A modern, responsive Snake game. Eat, grow, and beat your high score.">
+    <title>Snake | Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-card">
+        <header class="game-header">
+            <div class="brand">
+                <span class="brand-mark" aria-hidden="true">S</span>
+                <div>
+                    <p class="eyebrow">ARCADE CLASSIC</p>
+                    <h1>Snake</h1>
+                </div>
+            </div>
+            <button class="icon-button" id="themeBtn" type="button" aria-label="Switch to light theme" title="Switch theme">
+                <span aria-hidden="true">☼</span>
+            </button>
+        </header>
+
+        <section class="score-row" aria-label="Game scores">
+            <div class="score-card">
+                <span class="score-label">SCORE</span>
+                <strong class="score" aria-live="polite">0</strong>
+            </div>
+            <div class="score-card score-card-best">
+                <span class="score-label">BEST</span>
+                <strong class="high-score">0</strong>
+            </div>
+        </section>
+
+        <div class="toolbar">
+            <div class="level-selector" role="group" aria-label="Game speed">
+                <button class="level-button" type="button" data-speed="180" aria-pressed="false">Easy</button>
+                <button class="level-button active" type="button" data-speed="125" aria-pressed="true">Medium</button>
+                <button class="level-button" type="button" data-speed="85" aria-pressed="false">Hard</button>
+            </div>
+            <div class="game-actions">
+                <button class="secondary-button" id="resetBtn" type="button">New game</button>
+                <button class="primary-button" id="pauseBtn" type="button" aria-pressed="false">Pause</button>
+            </div>
+        </div>
+
+        <section class="board-shell" aria-label="Snake game">
+            <div class="play-board" role="img" aria-label="Game board. Use arrow keys or the controls below to play."></div>
+            <div class="game-message" id="gameMessage">
+                <span class="message-icon" aria-hidden="true">↑</span>
+                <strong id="messageTitle">Ready to play?</strong>
+                <span id="messageText">Use the arrow keys or tap a direction to start.</span>
+            </div>
+        </section>
+
+        <nav class="controls" aria-label="Touch controls">
+            <button class="direction-button" type="button" data-direction="ArrowLeft" aria-label="Move left">←</button>
+            <button class="direction-button" type="button" data-direction="ArrowUp" aria-label="Move up">↑</button>
+            <button class="direction-button" type="button" data-direction="ArrowDown" aria-label="Move down">↓</button>
+            <button class="direction-button" type="button" data-direction="ArrowRight" aria-label="Move right">→</button>
+        </nav>
+
+        <footer class="game-footer">
+            <span><i class="legend-dot food-dot" aria-hidden="true"></i> Food <b>+1</b></span>
+            <span><i class="legend-dot poison-dot" aria-hidden="true"></i> Poison <b>avoid</b></span>
+            <span class="keyboard-hint">Arrow keys / WASD</span>
+        </footer>
+    </main>
+    <footer class="game-footer">
+        1Created with <span class="heart">❤️</span> from <a href="https://olamzygraphics-portfolio.netlify.app/"><strong>Olamzy</strong></a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
